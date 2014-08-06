@@ -13,7 +13,6 @@ which would produce decent looking output without looking stupid in vim.
 
 ## Basic conventions for Markdown files
 
-  - Wrap all lines at 80 characters.
   - Denote **bold** text using the asterisk format: `**bold text**`.
   - Denote _italic_ text using the underscore format: `_emphasized text_`.
   - Force a linebreak by ending a line with two spaces, no more.
@@ -37,6 +36,7 @@ which would produce decent looking output without looking stupid in vim.
 
   - **List items** must be indented 2 spaces further than their parent.
   - Unordered list Items should use `-` instead of `*`.
+  - Ordered lists should use `1.` instead of the index of the item
 
     ```
     This is arbitrary text, an unordered list begins on the next line.
@@ -45,7 +45,7 @@ which would produce decent looking output without looking stupid in vim.
         - sub-list item
     ```
 
-  - The first level of list items must not be preceded by a newline.
+  - The first level of list items must not be preceded by a newline. (Unless the above item requires a following newline)
   - All lists must be followed by newlines.
 
     ```
@@ -53,7 +53,8 @@ which would produce decent looking output without looking stupid in vim.
       - list item 1
       - list item 2
         1. sub-list item 1
-        2. sub-list item 2
+        1. sub-list item 2
+        1. sub-list item 3
 
       - list item 3
       - list item 4
@@ -153,4 +154,3 @@ Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
   1. This is enforced locally through redcarpet2's configuration:
      `:space_after_headers`.
      <a name="1"><a>
-
